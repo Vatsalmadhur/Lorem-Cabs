@@ -1,0 +1,12 @@
+@import '../base/variable';
+
+.blob{
+    height: 40vh;
+    width: 40vw;
+    background-color: $light-orange;
+    border-radius: 75px;
+    transform: rotate(-23deg);
+    position: absolute;
+    left: -170px;
+    bottom: 100px;
+}

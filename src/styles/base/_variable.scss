@@ -1,19 +1,18 @@
 //colors
-$black: #141414;
-$white: #ffffff;
-$light-gray: #e1e1e1;
-$gray: #aaa8a8;
-$dark-gray: #676767 !default;
+$gray: #263238;
+$black: #000000!default;
+$primary-orange: #FF3D00 !default;
+$medium-orange:#FFD180;
+$light-orange: #FFCCBC;
+$extra-light-orange: #FFF3E0;
+// font-family: 'Arapey', serif;
+// font-family: 'Lato', sans-serif;
+// font-family: 'Sriracha', cursive;
 
-$primary-green: #dfe7dd !default;
-$primary-orange: #efc14c !default;
-
-$light-green: lighten($primary-green, 10);
-$light-orange: lighten($primary-orange, 10);
 
 //fonts
-$font1: 'Jost', sans-serif;
-$font2: 'Inter', sans-serif;
+$font1: 'Francois One', sans-serif;
+$font2: 'Karla', sans-serif;
 
 $link-color: #ffffff;
 $max-width: 1650px;

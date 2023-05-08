@@ -1,1 +1,25 @@
 @import '../base/variable';
+.body{
+    background-color: $extra-light-orange;
+}
+.heading{
+    font-family: $font1;
+}
+.subHeading{
+    font-family: $font2;
+}
+.abtText{
+    font-family: $font2;
+    
+}
+.orangeBtn{
+    background-color: $primary-orange;
+  }
+.grayBtn{
+    background-color: $gray;
+  }
+  .outlineBtn{
+    color: $gray;
+    background-color: white;
+    border: 1px solid $gray;
+  }
