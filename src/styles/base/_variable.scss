@@ -1,0 +1,19 @@
+//colors
+$black: #141414;
+$white: #ffffff;
+$light-gray: #e1e1e1;
+$gray: #aaa8a8;
+$dark-gray: #676767 !default;
+
+$primary-green: #dfe7dd !default;
+$primary-orange: #efc14c !default;
+
+$light-green: lighten($primary-green, 10);
+$light-orange: lighten($primary-orange, 10);
+
+//fonts
+$font1: 'Jost', sans-serif;
+$font2: 'Inter', sans-serif;
+
+$link-color: #ffffff;
+$max-width: 1650px;

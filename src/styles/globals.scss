@@ -1,0 +1,24 @@
+@import './base/base';
+@import './base/variable';
+
+@import './base/typography';
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}

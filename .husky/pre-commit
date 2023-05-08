@@ -1,0 +1,20 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🏗️👷 Checking linting and building our project before committing...'
+
+npm run lint ||
+(
+    echo '🐞 Linting error!'
+    false; 
+)
+
+echo 'Alright... Code looks good.. Trying to build now.'
+
+# npm run build ||
+# (
+#     echo '❌👷🔨 Build failed!'
+#     false;
+# )
+
+echo '✅ Commiting code...'
