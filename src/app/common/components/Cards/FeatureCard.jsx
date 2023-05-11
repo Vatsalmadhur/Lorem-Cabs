@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Image, Text, Group } from '@mantine/core';
-import Styles from "../../../styles/common/Card/FeatureCard.module.scss"
+import Styles from "../../../../styles/common/Card/FeatureCard.module.scss"
 function FeatureCard(props) {
   return (
     <>

@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from'../../styles/common/headings.module.scss'
+import Styles from'../../../styles/common/headings.module.scss'
 import { Text } from "@mantine/core";
 function Heading(props) {
     return(

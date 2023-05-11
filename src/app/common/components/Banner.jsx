@@ -1,6 +1,6 @@
 import { Container,Text } from "@mantine/core";
 import React from "react";
-import Styles from '../../styles/common/Banner.module.scss'
+import Styles from '../../../styles/common/Banner.module.scss'
 function Banner(props) {
     return(
         <>

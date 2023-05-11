@@ -2,7 +2,7 @@ import { Container, Flex } from "@mantine/core";
 import React from "react";
 import { Image } from "@mantine/core";
 import { Text } from "@mantine/core";
-import Styles from '../../../styles/common/card.module.scss'
+import Styles from '../../../../styles/common/card.module.scss'
 // import { Container} from '@mantine/core';
 
 

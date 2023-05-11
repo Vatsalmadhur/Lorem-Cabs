@@ -1,7 +1,7 @@
 import { Container } from "@mantine/core";
 import React from "react";
 import Blob from "./blob";
-import Styles from '../../styles/common/Background.module.scss'
+import Styles from '../../../styles/common/Background.module.scss'
 function Background(){
     return(
         <>

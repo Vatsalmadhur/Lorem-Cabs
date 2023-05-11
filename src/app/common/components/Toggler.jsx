@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Flex } from '@mantine/core';
 import { Button } from '@mantine/core';
-import Styles from '../../styles/common/Toggler.module.scss';
+import Styles from '../../../styles/common/Toggler.module.scss';
 function Toggler() {
   // const getbg = ;
   const btns = ['Driver', 'Rider'];

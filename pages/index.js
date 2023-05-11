@@ -1,17 +1,19 @@
 import Head from 'next/head';
 import Styles from '../src/styles/pages/home.module.scss';
-import { Container, Flex} from '@mantine/core';
+import { Container, Flex } from '@mantine/core';
 import { Image } from '@mantine/core';
 // import autoImg from '/images/auto.svg'
 import { Button } from '@mantine/core';
 import { Text } from '@mantine/core';
-import Blob from '../src/app/common/blob';
-import Heading from '../src/app/common/Headings';
-import Card from '../src/app/common/Cards/Card';
-import Toggler from '../src/app/common/Toggler';
-import FeatureCard from '@common/Cards/FeatureCard';
-import Banner from '../src/app/common/Banner';
-import Footer from '../src/app/common/Footer';
+import Blob from '../src/app/common/components/blob';
+import Heading from '../src/app/common/components/Headings';
+import Card from '../src/app/common/components/Cards/Card';
+import cardData from '../src/app/common/containers/cardData'
+import Toggler from '../src/app/common/components/Toggler';
+import FeatureCard from '@common/components/Cards/FeatureCard';
+import featureCardData from '../src/app/common/containers/featureCardData';
+import Banner from '../src/app/common/components/Banner';
+import Footer from '../src/app/common/components/Footer';
 export default function Home() {
   return (
     <>
@@ -30,8 +32,12 @@ export default function Home() {
           wrap="wrap-reverse"
           // gap={10}
           justify="center"
-          
-          sx={{ border: '2px solid green',width:"100%", height: 'auto',minHeight:"100vh" }}
+          sx={{
+            border: '2px solid green',
+            width: '100%',
+            height: 'auto',
+            minHeight: '100vh',
+          }}
         >
           <Container
             size="xs"
@@ -78,7 +84,7 @@ export default function Home() {
             </Flex>
           </Container>
           <Container size="xs" sx={{ border: '2px solid blue' }}>
-            <Image src="/images/auto.svg" fit='contain' />
+            <Image src="/images/auto.svg" fit="contain" />
           </Container>
         </Flex>
         <Blob />
@@ -88,7 +94,14 @@ export default function Home() {
           <Heading Heading="Lets Flow" subHeading="Ride Sharing Reimagined" />
         </Container>
         <Container size="xl">
-          <Card
+          {cardData.map((val)=>(
+            <Card
+            Heading={val.Heading}
+            subHeading={val.subHeading}
+            source={val.source}
+            direction={val.direction}/>
+          ))}
+          {/* <Card
             Heading="Easy to use"
             subHeading="Flow is designed with the user in mind, offering an effortless and seamless experience from start to finish"
             source="/images/snap.svg"
@@ -103,7 +116,7 @@ export default function Home() {
             Heading="Ride now"
             subHeading="Whether you're running errands, commuting to work, or traveling to your friend's place, Flow connects you with reliable drivers in minutes"
             source="/images/girlWithMobile.svg"
-          />
+          /> */}
         </Container>
         <Container size="lg">
           <Heading
@@ -121,21 +134,13 @@ export default function Home() {
           justify="center"
           sx={{ border: '2px solid green' }}
         >
-          <FeatureCard
-            source="/images/wallet.svg"
-            heading="Quick Cashouts"
-            subHeading="Cashout your earnings within 24 hours"
-          />
-          <FeatureCard
-            source="/images/carpool.svg"
-            heading="Max-earnings with Pooling"
-            subHeading="Pick up multiple passengers heading in the same direction, increasing your earnings with each additional pickup"
-          />
-          <FeatureCard
-            source="/images/seatbelt.svg"
-            heading="Always by Your Side"
-            subHeading="Drive with Confidence, Your Safety is Our Priority - Join the Flow Community for a Secure and Supportive Experience"
-          />
+          {featureCardData.map((val) => (
+            <FeatureCard
+              source={val.source}
+              heading={val.heading}
+              subHeading={val.subHeading}
+            />
+          ))}
         </Flex>
 
         <Container sx={{ border: '2px solid green' }} size="lg">
@@ -158,7 +163,7 @@ export default function Home() {
             </Flex>
           </Flex>
         </Container>
-        <Banner text="We thrive to empower mobility, make cities better, and put people first."/>
+        <Banner text="We thrive to empower mobility, make cities better, and put people first." />
 
         {/* <Footer/> */}
       </Container>

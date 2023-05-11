@@ -1,8 +1,8 @@
 import { Container,Text,Flex } from "@mantine/core";
 import React from "react";
-import Blob from "@common/blob";
-import Heading from "@common/Headings";
-import Background from "@common/Background";
+import Blob from "@common/components/blob";
+import Heading from "@common/components/Headings";
+import Background from "@common/components/Background";
 
 function Contact(){
     return(
