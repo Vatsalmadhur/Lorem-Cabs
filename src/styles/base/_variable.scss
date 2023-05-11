@@ -1,7 +1,9 @@
 //colors
 $gray: #263238;
+$light-gray:lighten($gray,10);
 $black: #000000!default;
 $primary-orange: #FF3D00 !default;
+$hover-orange:lighten($primary-orange,10);
 $medium-orange:#FFD180;
 $light-orange: #FFCCBC;
 $extra-light-orange: #FFF3E0;

@@ -1,5 +1,5 @@
-import autoImg from './autoIllustration.svg'
-import logo from './flowLogo.png'
+import autoImg from './auto.svg';
+import logo from './flow.png';
 
 export default {
     autoImg,

@@ -1,0 +1,11 @@
+@import '../base/variable';
+
+.heading{
+    font-family: $font1;
+    font-size: 2.5rem;
+}
+.subHeading{
+    font-family: $font2;
+    font-size: 0.9rem;
+    font-weight: 600;
+}

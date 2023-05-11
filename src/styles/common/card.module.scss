@@ -1,0 +1,12 @@
+@import '../base/variable';
+
+.cardHeader{
+    font-family: $font1;
+    font-size: 2rem;
+}
+.cardSubHeader{
+    font-family: $font2;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 300px;
+}

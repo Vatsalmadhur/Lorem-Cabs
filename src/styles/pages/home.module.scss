@@ -2,24 +2,29 @@
 .body{
     background-color: $extra-light-orange;
 }
-.heading{
-    font-family: $font1;
-}
-.subHeading{
-    font-family: $font2;
-}
+
 .abtText{
     font-family: $font2;
-    
 }
 .orangeBtn{
     background-color: $primary-orange;
+    &:hover{
+      background-color:$hover-orange;
+    }
   }
 .grayBtn{
     background-color: $gray;
+    &:hover{
+      background-color:$light-gray;
+    }
   }
   .outlineBtn{
     color: $gray;
     background-color: white;
     border: 1px solid $gray;
+  }
+  .textOfMobile{
+    font-family: $font2;
+    font-size: 3rem;
+    font-weight: 600;
   }

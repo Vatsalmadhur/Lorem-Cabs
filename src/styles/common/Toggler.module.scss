@@ -1,0 +1,24 @@
+@import '../base/variable';
+.innerBox{
+    background-color: $medium-orange;
+    border-radius: 75em;
+
+}
+.btn{
+    background-color: $primary-orange;
+
+}
+.active{
+    background-color: $primary-orange;
+    &:hover{
+    background-color: $primary-orange;
+    }
+}
+.common{
+    background-color: $medium-orange;
+    color: $black;
+    &:hover{
+        background-color: $medium-orange;
+        }
+    
+}
