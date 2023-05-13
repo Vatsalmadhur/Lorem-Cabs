@@ -9,14 +9,10 @@ import Blob from '../src/app/common/components/blob';
 import Heading from '../src/app/common/components/Headings';
 import Card from '../src/app/common/components/Cards/Card';
 import cardData from '../src/app/common/containers/cardData'
-import Toggler from '../src/app/common/components/Toggler';
-import FeatureCard from '@common/components/Cards/FeatureCard';
-import featureCardData from '../src/app/common/containers/featureCardData';
 import Banner from '../src/app/common/components/Banner';
 import Features from '../src/app/common/components/Features';
-import Navbar from '../src/app/common/components/Navbar';
-import { useState } from 'react';
-// import Footer from '@common/components/Footer';
+// import Navbar from '../src/app/common/components/Navbar';
+import Footer from '@common/components/Footer';
 export default function Home() {
   return (
     <>
@@ -174,7 +170,7 @@ export default function Home() {
         </Container>
         <Banner text="We thrive to empower mobility, make cities better, and put people first." />
 
-        {/* <Footer/> */}
+        <Footer/>
       </Container>
     </>
   );
