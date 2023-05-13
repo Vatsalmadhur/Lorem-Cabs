@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Styles from '../src/styles/pages/home.module.scss';
-import { Container, Flex } from '@mantine/core';
+import { Container, Flex} from '@mantine/core';
 import { Image } from '@mantine/core';
 // import autoImg from '/images/auto.svg'
 import { Button } from '@mantine/core';
@@ -13,13 +13,18 @@ import Toggler from '../src/app/common/components/Toggler';
 import FeatureCard from '@common/components/Cards/FeatureCard';
 import featureCardData from '../src/app/common/containers/featureCardData';
 import Banner from '../src/app/common/components/Banner';
-import Footer from '../src/app/common/components/Footer';
+import Features from '../src/app/common/components/Features';
+import Navbar from '../src/app/common/components/Navbar';
+import { useState } from 'react';
+// import Footer from '@common/components/Footer';
 export default function Home() {
   return (
     <>
       <Head>
         <title>Flow cabs</title>
       </Head>
+
+      {/* <Navbar/> */}
 
       <Container
         size="100%"
@@ -125,8 +130,8 @@ export default function Home() {
           />
         </Container>
 
-        <Toggler />
-        <Flex
+        {/* <Toggler /> */}
+        {/* <Flex
           gap={40}
           p={10}
           wrap="wrap"
@@ -134,6 +139,8 @@ export default function Home() {
           justify="center"
           sx={{ border: '2px solid green' }}
         >
+
+          
           {featureCardData.map((val) => (
             <FeatureCard
               source={val.source}
@@ -141,7 +148,9 @@ export default function Home() {
               subHeading={val.subHeading}
             />
           ))}
-        </Flex>
+
+        </Flex> */}
+        <Features/>
 
         <Container sx={{ border: '2px solid green' }} size="lg">
           <Flex justify="space-around" wrap="wrap">
