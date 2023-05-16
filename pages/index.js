@@ -11,7 +11,7 @@ import Card from '../src/app/common/components/Cards/Card';
 import cardData from '../src/app/common/containers/cardData'
 import Banner from '../src/app/common/components/Banner';
 import Features from '../src/app/common/components/Features';
-// import Navbar from '../src/app/common/components/Navbar';
+import Navbar from '../src/app/common/components/Navbar';
 import Footer from '@common/components/Footer';
 export default function Home() {
   return (
@@ -52,10 +52,6 @@ export default function Home() {
               </Button>
             </Flex>
             <Container>
-              {/* <Text className={Styles.heading}>Getting late for work?</Text>
-              <Text  ml={5} fw={600} className={Styles.subHeading}>
-                Book flow and never miss a chance!
-              </Text> */}
               <Heading
                 Heading="Getting late for work?"
                 subHeading="Book flow and never miss a chance!"
@@ -90,8 +86,6 @@ export default function Home() {
         </Flex>
         <Blob />
         <Container size="xl" sx={{ border: '2px solid red' }}>
-          {/* <Text className={Styles.heading}>Lets Flow</Text>
-        <Text className={Styles.subHeading}>Ride Sharing Reimagined</Text> */}
           <Heading Heading="Lets Flow" subHeading="Ride Sharing Reimagined" />
         </Container>
         <Container size="xl">
@@ -102,22 +96,7 @@ export default function Home() {
             source={val.source}
             direction={val.direction}/>
           ))}
-          {/* <Card
-            Heading="Easy to use"
-            subHeading="Flow is designed with the user in mind, offering an effortless and seamless experience from start to finish"
-            source="/images/snap.svg"
-          />
-          <Card
-            Heading="Beat the surge"
-            subHeading="Say goodbye to peak hour price hikes, enjoy stable fares with no surge pricing."
-            source="/images/autoOrange.svg"
-            direction="row-reverse"
-          />
-          <Card
-            Heading="Ride now"
-            subHeading="Whether you're running errands, commuting to work, or traveling to your friend's place, Flow connects you with reliable drivers in minutes"
-            source="/images/girlWithMobile.svg"
-          /> */}
+          
         </Container>
         <Container size="lg">
           <Heading
@@ -125,27 +104,6 @@ export default function Home() {
             subHeading="Make Everyday Count"
           />
         </Container>
-
-        {/* <Toggler /> */}
-        {/* <Flex
-          gap={40}
-          p={10}
-          wrap="wrap"
-          align="center"
-          justify="center"
-          sx={{ border: '2px solid green' }}
-        >
-
-          
-          {featureCardData.map((val) => (
-            <FeatureCard
-              source={val.source}
-              heading={val.heading}
-              subHeading={val.subHeading}
-            />
-          ))}
-
-        </Flex> */}
         <Features/>
 
         <Container sx={{ border: '2px solid green' }} size="lg">

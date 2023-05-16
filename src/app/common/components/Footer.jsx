@@ -15,6 +15,7 @@ import {
 const useStyles = createStyles((theme) => ({
   footer: {
     marginTop: 20,
+    padding:20,
     paddingTop: theme.spacing.xl * 2,
     paddingBottom: theme.spacing.xl * 2,
     backgroundColor:
@@ -76,7 +77,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   link: {
-    display: 'block',
+    display: 'flex',
+alignItems: 'center',
+justifyContent: 'center',
     color:
       theme.colorScheme === 'dark'
         ? theme.colors.dark[1]
@@ -93,6 +96,8 @@ const useStyles = createStyles((theme) => ({
   title: {
     fontSize: theme.fontSizes.lg,
     fontWeight: 700,
+    // border:'2px solid red',
+    textAlign:'center',
     fontFamily: `'Karla', sans-serif}`,
     marginBottom: theme.spacing.xs / 2,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
@@ -183,7 +188,7 @@ function Footer({
             Lets Flow
           </Text>
         </div>
-        <div className={classes.groups}>{groups}</div>
+        <div className={classes.groups} >{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
