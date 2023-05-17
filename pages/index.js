@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Styles from '../src/styles/pages/home.module.scss';
-import { Container, Flex} from '@mantine/core';
+import { Container, Flex } from '@mantine/core';
 import { Image } from '@mantine/core';
 // import autoImg from '/images/auto.svg'
 import { Button } from '@mantine/core';
@@ -8,7 +8,7 @@ import { Text } from '@mantine/core';
 import Blob from '../src/app/common/components/blob';
 import Heading from '../src/app/common/components/Headings';
 import Card from '../src/app/common/components/Cards/Card';
-import cardData from '../src/app/common/containers/cardData'
+import cardData from '../src/app/common/containers/cardData';
 import Banner from '../src/app/common/components/Banner';
 import Features from '../src/app/common/components/Features';
 import Navbar from '../src/app/common/components/Navbar';
@@ -20,21 +20,20 @@ export default function Home() {
         <title>Flow cabs</title>
       </Head>
 
-      {/* <Navbar/> */}
-
       <Container
         size="100%"
-        pl="10%"
-        pr="10%"
+        pl="12%"
+        pr="12%"
         className={Styles.body}
-        sx={{ border: '2px solid red' }}
+        // sx={{ border: '2px solid red' }}
       >
+        <Navbar />
         <Flex
           wrap="wrap-reverse"
           // gap={10}
           justify="center"
           sx={{
-            border: '2px solid green',
+            // border: '2px solid green',
             width: '100%',
             height: 'auto',
             minHeight: '100vh',
@@ -43,15 +42,18 @@ export default function Home() {
           <Container
             size="xs"
             mt={50}
-            sx={{ border: '2px solid blue', zIndex: 3 }}
+            sx={{
+              // border: '2px solid blue',
+              zIndex: 3,
+            }}
           >
-            <Flex ml={20} justify="space-between">
-              <Image src="/images/flow.png" p="xs" height={50} width={140} />
+            <Flex m={0} justify="space-between">
+              <Image src="/images/flow.png"  height={50} width={140} />
               <Button size="xs" m="md" className={Styles.grayBtn}>
                 Login
               </Button>
             </Flex>
-            <Container>
+            <Container m={0} p={0}>
               <Heading
                 Heading="Getting late for work?"
                 subHeading="Book flow and never miss a chance!"
@@ -80,35 +82,52 @@ export default function Home() {
               </Button>
             </Flex>
           </Container>
-          <Container size="xs" sx={{ border: '2px solid blue' }}>
+          <Container
+            size="xs"
+            sx={
+              {
+                // border: '2px solid blue'
+              }
+            }
+          >
             <Image src="/images/auto.svg" fit="contain" />
           </Container>
         </Flex>
         <Blob />
-        <Container size="xl" sx={{ border: '2px solid red' }}>
-          <Heading Heading="Lets Flow" subHeading="Ride Sharing Reimagined" />
+        <Container
+          size="xl"
+          p="xl"
+          //  sx={{ border: '2px solid red' }}
+        >
+          <Heading  Heading="Lets Flow" subHeading="Ride Sharing Reimagined" />
         </Container>
-        <Container size="xl">
-          {cardData.map((val)=>(
+        <Container size="xl" mb={100}>
+          {cardData.map((val) => (
             <Card
-            Heading={val.Heading}
-            subHeading={val.subHeading}
-            source={val.source}
-            direction={val.direction}/>
+              Heading={val.Heading}
+              subHeading={val.subHeading}
+              source={val.source}
+              direction={val.direction}
+            />
           ))}
-          
         </Container>
-        <Container size="lg">
+        <Container size="xl" p='xl'>
           <Heading
             Heading="Ready, Set, Flow!"
             subHeading="Make Everyday Count"
           />
         </Container>
-        <Features/>
+        <Features />
 
-        <Container sx={{ border: '2px solid green' }} size="lg">
+        <Container
+          // sx={{ border: '2px solid green' }}
+          size="xl"
+        >
           <Flex justify="space-around" wrap="wrap">
-            <Container sx={{ border: '2px solid green' }} size="md">
+            <Container
+              // sx={{ border: '2px solid green' }}
+              size="md"
+            >
               <Image
                 src="/images/flowbooking.webp"
                 sx={{ mixBlendMode: 'darken' }}
@@ -117,7 +136,10 @@ export default function Home() {
               />
             </Container>
             <Flex
-              sx={{ border: '2px solid green', width: '400px' }}
+              sx={{
+                // border: '2px solid green',
+                width: '400px',
+              }}
               align="center"
             >
               <Text className={Styles.textOfMobile}>
@@ -128,7 +150,7 @@ export default function Home() {
         </Container>
         <Banner text="We thrive to empower mobility, make cities better, and put people first." />
 
-        <Footer/>
+        <Footer />
       </Container>
     </>
   );

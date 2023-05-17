@@ -11,8 +11,12 @@ function Features(){
 
     return(
         <>
-        <Container size="xl"   sx={{ border: '2px solid green' }}>
-        <Flex direction="column"   sx={{ border: '2px solid green' }}>
+        <Container size="xl"  
+        //  sx={{ border: '2px solid green' }}
+         >
+        <Flex direction="column"   
+        // sx={{ border: '2px solid green' }}
+        >
             <Toggler active={active} setActive={setActive}/>
             <Flex wrap="wrap" justify="center">
             {(active === 'Driver' ? driverData:riderData).map((val) => (
