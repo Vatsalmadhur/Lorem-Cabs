@@ -4,7 +4,7 @@ import Styles from "../../../../styles/common/Card/FeatureCard.module.scss"
 function FeatureCard(props) {
   return (
     <>
-      <Card shadow="sm" m="md" padding="lg" radius="md"  className={Styles.cardBody} sx={{width:"300px",height:"400px"}}>
+      <Card shadow="sm" m="md" padding="lg" radius="md"  className={Styles.cardBody} sx={{width:"300px", minWidth:'300px',height:"400px"}}>
         <Card.Section >
           <Image
             src={props.source}

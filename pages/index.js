@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Styles from '../src/styles/pages/home.module.scss';
-import { Container, Flex } from '@mantine/core';
+import { Box, Container, Flex } from '@mantine/core';
 import { Image } from '@mantine/core';
 // import autoImg from '/images/auto.svg'
 import { Button } from '@mantine/core';
@@ -19,15 +19,16 @@ export default function Home() {
       <Head>
         <title>Flow cabs</title>
       </Head>
-
+      <Box 
+      className={Styles.body}
+      >
+      <Navbar />
       <Container
         size="100%"
         pl="12%"
         pr="12%"
-        className={Styles.body}
-        // sx={{ border: '2px solid red' }}
+        // sx={{ border: '2px solid red',width: '100vw' }}
       >
-        <Navbar />
         <Flex
           wrap="wrap-reverse"
           // gap={10}
@@ -83,14 +84,15 @@ export default function Home() {
             </Flex>
           </Container>
           <Container
-            size="xs"
+            // size="xs"
             sx={
               {
-                // border: '2px solid blue'
+                // border: '2px solid blue',
+                zIndex: 3,
               }
             }
           >
-            <Image src="/images/auto.svg" fit="contain" />
+            <Image src="/images/auto.svg" sx={{minWidth:'500px',width:'auto'}} height='500px'  />
           </Container>
         </Flex>
         <Blob />
@@ -150,8 +152,9 @@ export default function Home() {
         </Container>
         <Banner text="We thrive to empower mobility, make cities better, and put people first." />
 
-        <Footer />
       </Container>
+        <Footer />
+      </Box>
     </>
   );
 }

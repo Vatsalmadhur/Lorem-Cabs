@@ -14,7 +14,7 @@ import {
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    marginTop: 20,
+    // marginTop: 20,
     padding:20,
     paddingTop: theme.spacing.xl * 2,
     paddingBottom: theme.spacing.xl * 2,

@@ -22,7 +22,7 @@ function Card(props){
                  sx={{
                     // border:'2px solid green',
                  mixBlendMode:"darken"}} src={props.source}/>
-                <Container  m={0}
+                <Container  m={0} p={50}
                 //  sx={{border:'2px solid green'}}
                  >
                     <Text className={Styles.cardHeader}>

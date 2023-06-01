@@ -1,11 +1,26 @@
-import { createStyles,Image, Header, Menu, Group, Center, Burger, Container, rem } from '@mantine/core';
+import {
+  createStyles,
+  Image,
+  Header,
+  Menu,
+  Group,
+  Center,
+  Burger,
+  Container,
+  rem,
+  Box
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import Link from 'next/link';
 // import { IconChevronDown } from '@tabler/icons-react';
 // import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
- 
-  header: { backgroundColor:'#FFF3E0', alignContent: 'center' },
+  header: {
+    backgroundColor: '#FFF3E0',
+    alignContent: 'center',
+    width: '100vw',
+  },
 
   inner: {
     height: rem(56),
@@ -35,10 +50,10 @@ const useStyles = createStyles((theme) => ({
     color: theme.black,
     fontSize: theme.fontSizes.xl,
     fontWeight: 700,
-    fontFamily:'Karla',
+    fontFamily: 'Karla',
 
     '&:hover': {
-     cursor: 'pointer'
+      cursor: 'pointer',
     },
   },
 
@@ -47,7 +62,12 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
- function Navbar({ links =[{link: '/about', label: 'About'},{link: '/about', label: 'Contact'},{link: '/about', label: 'Lorem'}]}) {
+const links = [
+  { link: '/about', label: 'About' },
+  { link: '/contact', label: 'Contact' },
+  { link: '/about', label: 'Lorem' },
+];
+function Navbar() {
   const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
@@ -58,18 +78,22 @@ const useStyles = createStyles((theme) => ({
 
     if (menuItems) {
       return (
-        <Menu key={link.label} trigger="hover" transitionProps={{ exitDuration: 0 }} withinPortal>
+        <Menu
+          key={link.label}
+          trigger="hover"
+          transitionProps={{ exitDuration: 0 }}
+          withinPortal
+        >
           <Menu.Target>
-            <a
-              href={link.link}
+            <Link
+              to={link.link}
               className={classes.link}
-              onClick={(event) => event.preventDefault()}
+              // onClick={(event) => event.preventDefault()}
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
-                <IconChevronDown size="0.9rem" stroke={1.5} />
               </Center>
-            </a>
+            </Link>
           </Menu.Target>
           <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
@@ -89,18 +113,10 @@ const useStyles = createStyles((theme) => ({
   });
 
   return (
-    <Header className={classes.header} height={56} mb={30}
-    sx={{
-    // boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-    // backdropFilter: "blur( 4)",
-    // WebkitBackdropFilter: "blur( 4 )",
-    // // borderRadius: 30,
-      }}
-    >
-      <Container size='lg'  >
+    <Header className={classes.header} height={56} pb={70} pt={10}>
+      <Container size='xl' >
         <div className={classes.inner}>
-          {/* <MantineLogo size={28} inverted /> */}
-          <Image src='/images/flow.png' width={130} />
+          <Image src="/images/flow.png" width={130} />
           <Group spacing={5} className={classes.links}>
             {items}
           </Group>
@@ -109,9 +125,30 @@ const useStyles = createStyles((theme) => ({
             onClick={toggle}
             className={classes.burger}
             size="sm"
-            color="#fff"
+            color="#000"
           />
         </div>
+      </Container>
+      <Container
+        m={0}
+        sx={{
+          zIndex: '4',
+          position: 'absolute',
+          backgroundColor: '#FFF3E0',
+          textDecoration:'none',
+          // backgroundColor:'red',
+          width: '100%',
+          textAlign: 'center',
+          fontSize: '1.5rem',
+          display:'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexDirection :'column',
+        }}
+        // p={50}
+      >
+        {opened &&
+          links.map((link) => <Box p={10} m={10}  ><Link href={link.link} >{link.label}</Link></Box>)}
       </Container>
     </Header>
   );
