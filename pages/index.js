@@ -19,7 +19,7 @@ export default function Home() {
       <Head>
         <title>Flow cabs</title>
       </Head>
-      <Box 
+      <Box
       className={Styles.body}
       >
       <Navbar />
@@ -33,11 +33,12 @@ export default function Home() {
           wrap="wrap-reverse"
           // gap={10}
           justify="center"
+          align="center"
           sx={{
             // border: '2px solid green',
             width: '100%',
             height: 'auto',
-            minHeight: '100vh',
+            minHeight: '80vh',
           }}
         >
           <Container
@@ -74,7 +75,7 @@ export default function Home() {
                 safe, reliable, and affordable ride.
               </Text>
             </Container>
-            <Flex mt={100} justify="space-between">
+            <Flex mt={50} justify="space-between">
               <Button variant="outline" className={Styles.outlineBtn}>
                 Download app
               </Button>
